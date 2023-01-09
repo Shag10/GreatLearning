@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class SubarrayWithGivenSum {
 	
-	//Time Complexity --> O(2n) ~ O(n)
+	//Time Complexity --> O(2n) ~~ O(n)
 	//Space --> O(1)
 	public static void subarrayWithGivenSum(int[] arr, int n, int sum)
 	{
