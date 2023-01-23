@@ -23,7 +23,9 @@ public class SubarrayWithgivenXorK {
 	}
 	public static int subarrayWithgivenXorKOptimize(int[] A,int n, int B)
 	{
-		HashMap<Integer,Integer> visited = new HashMap<Integer,Integer>();
+	    //Time --> O(n)
+	    //Space --> O(n)
+	    HashMap<Integer,Integer> visited = new HashMap<Integer,Integer>();
 	    int c = 0;
 	    int cpx = 0;
 	    for(int i = 0;i<n;i++) {
