@@ -31,11 +31,11 @@ public class WildcardMatching {
 	public static void main(String args[])
 	{
 		Scanner sc = new Scanner(System.in);
-        System.out.println("Enter string");
-        String str = sc.nextLine();
-        System.out.println("Enter Pattern string");
-        String pattern = sc.nextLine();
-        System.out.println("String is matching?");
+		System.out.println("Enter string");
+		String str = sc.nextLine();
+		System.out.println("Enter Pattern string");
+		String pattern = sc.nextLine();
+		System.out.println("String is matching?");
 		if (strmatch(str, pattern, str.length(), pattern.length()))
 			System.out.println("Yes");
 		else
