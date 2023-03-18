@@ -4,25 +4,32 @@ class WordsReversal {
   public static void main(String[] args) {
     Scanner scan = new Scanner(System.in); 
     String s = scan.nextLine();    
-    System.out.println(removeStars(s));
+
+    System.out.println(reverseWordsofSentence(s));
   }
 
-   public static String removeStars(String s) {
-        //write your code here
-        if(s.equals("") || s.equals("*")) return s;
-        String ans = "";
-        Stack<Character> st = new Stack<>();
-        for(char ch : s.toCharArray())
-        {
-          if(!st.isEmpty() && ch == '*') st.pop();
-          else st.push(ch);
-        }
-        for(char c: st)
-        {
-          if(!st.isEmpty()) ans += c;
-        }
-
-        return ans;
-    }
-
+  public static String reverseWordsofSentence(String s) {
+   //write your code here
+   Stack<String> st = new Stack<>();
+   //String[] ans = s.split(" ", 0);
+   String res = "";
+   String temp = "";
+   for(int i=0; i<s.length(); i++)
+   {
+     if(s.charAt(i) == ' ')
+     {
+       st.push(temp);
+       temp = "";
+     }
+     else temp += s.charAt(i);
+   }
+   st.push(temp);
+   while(!st.isEmpty())
+   {
+      temp = st.peek();
+      res += temp + " ";
+      st.pop();
+   }
+   return res.trim();
+  }
 }
